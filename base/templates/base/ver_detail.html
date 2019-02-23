@@ -1,0 +1,121 @@
+{% extends "base/base.html" %}
+{% block content %}
+
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+</style>
+</head>
+<body>
+	<h2>Cliente</h2>
+	<table>
+
+		    <tr>
+		   <th colspan="2">Nombre</th>	
+		        <th>Telefono</th>
+		    </tr>
+
+		    <tr> 
+		        <td colspan="2">{{ mira.clienteid.nombre }}
+		        {{ mira.clienteid.apellido }}</td> 
+		        <td>{{ mira.clienteid.telefono }}</td>
+		   
+		    </tr>
+
+		</table>
+
+	<p padding: 0 7em 2em 0 ><h2>Pedido</h2></p>
+	<table>
+		    <tr>
+
+		        <th>Monio</th>	
+
+		        <th>Camisa</th>
+		        <th>Corbata</th>
+		        <th>Modelo</th>
+		    </tr>
+
+		    <tr> 
+		        <td>{{ mira.monio }}</td>
+		        <td>{{ mira.camisa }}</td>
+		        <td>{{ mira.corbata }}</td>
+		        <td>{{ mira.modelo }}</td>
+		   
+		    </tr>
+
+		</table>
+
+
+	<p padding: 0 7em 2em 0 ><h2>Medidas</h2></p>
+	<table>
+
+		    <tr>
+		        <th>Pecho</th>	
+		        <th>Cintura</th>
+		        <th>Largo</th>
+		        <th>Manga</th>
+		        <th>Cuello</th>
+		    </tr>
+
+		    <tr> 
+		        <td>{{ mira.clienteid.pecho }}</td>
+		        <td>{{ mira.clienteid.cintura }}</td>
+		        <td>{{ mira.clienteid.largo }}</td>
+		        <td>{{ mira.clienteid.manga }}</td>
+		        <td>{{ mira.clienteid.cuello }}</td>
+		   
+		    </tr>
+
+		</table>
+
+	<p padding: 0 7em 2em 0 ><h2>Estado de reservacion</h2></p>
+	<table>
+		    <tr>
+		        <th>Costo total</th>	
+		        <th>Anticipo</th>
+		        <th>Saldo actual</th>
+		        <th>Deposito</th>
+		    </tr>
+
+		    <tr> 
+		        <td>{{ mira.costo }}</td>
+		        <td>{{ mira.anticipo }}</td>
+		        <td>{{ mira.saldo }}</td>
+		        <td>{{ mira.deposito }}</td>
+		   
+		    </tr>
+
+		</table>
+
+
+	<p padding: 0 7em 2em 0 ><h2>Datos de la reservacion</h2></p>
+	<table>
+
+		    <tr>
+
+		        <th>Fecha de registro</th>	
+
+		        <th>Fecha de entrega</th>
+		        <th>Fecha de devolucion</th>
+		        <th>Entregado?</th>
+		    </tr>
+
+		    <tr> 
+		        <td>{{ mira.registro }}</td>
+		        <td>{{ mira.entrega }}</td>
+		        <td>{{ mira.devolucion }}</td>
+		        <td>{{ mira.entregado }}</td>
+		   
+		    </tr>
+
+		</table>
+
+		<p padding: 0 7em 20em 0 ></p>
+	
+{% endblock content %}

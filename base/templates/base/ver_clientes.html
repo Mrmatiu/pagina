@@ -1,0 +1,48 @@
+{% extends "base/base.html" %}
+{% block content %}
+<body>
+	<h2>Clientes</h2>
+
+</body>
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+</style>
+</head>
+<body>
+
+		<table>
+
+		    <tr>
+		        <th colspan="2">Nombre</th>	
+		        <th>Telefono</th>
+		        <th>Pecho</th>	
+		        <th>Cintura</th>
+		        <th>Largo</th>
+		        <th>Manga</th>
+		        <th>Cuello</th>
+		    </tr>
+		        {% for mira in mira%}
+
+		    <tr> 
+		        <td colspan="2">{{ mira.nombre }}
+		        {{ mira.apellido }}</td> 
+		        <td>{{ mira.telefono }}</td>
+		        <td>{{ mira.pecho }}</td>
+		        <td>{{ mira.cintura }}</td>
+		        <td>{{ mira.largo }}</td>
+		        <td>{{ mira.manga }}</td>
+		        <td>{{ mira.cuello }}</td>
+		   
+		    </tr>
+		    		{% endfor %}
+
+		</table>
+	
+{% endblock content %}
